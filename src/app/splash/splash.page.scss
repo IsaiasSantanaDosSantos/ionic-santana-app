@@ -1,0 +1,74 @@
+:root{
+  --defaultFont: 'Poppins', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.splashContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-video {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  video {
+    width: 103%;
+    background-color: #000;
+  }
+}
+// .logo-video {
+//   background: linear-gradient(
+//     to right,
+//     #fff,
+//     #000,
+//     #000,
+//     #000,
+//     #fff,
+//     #fff,
+//     #fff
+//   );
+//   background-clip: text;
+//   -webkit-background-clip: text;
+//   color: transparent;
+//   background-size: 300% auto;
+//   animation: shine 15s linear infinite;
+//   font-family: var(--defaultFont), sans-serif;
+//   font-weight: bold;
+//   text-align: center;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: start;
+//   justify-content: center;
+// }
+// h1 {
+//   font-family: var(--defaultFont);
+// }
+
+// .web-developer {
+//   font-family: var(--defaultFont);
+ 
+// }
+
+// @keyframes shine {
+//   100% {
+//     background-position: -100%;
+//   }
+//   0% {
+//     background-position: 200%;
+//   }
+// }
+
+
+
+
+
+
