@@ -1,4 +1,3 @@
-
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,26 +6,26 @@ import { Router } from '@angular/router';
   templateUrl: './splash.page.html',
   styleUrls: ['./splash.page.scss'],
 })
-export class SplashPage implements OnInit, AfterViewInit {
-  @ViewChild('logoVideo') logoVideo: any;
-  @ViewChild('botaoIniciar') botaoIniciar: any;
+export class SplashPage implements OnInit { //, AfterViewInit
+  @ViewChild('logoAnimate') logoAnimate: any;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.router.navigateByUrl('home');
-    }, 3500)
+    // setTimeout(() => {
+    //   this.router.navigateByUrl('home');
+    // }, 5000)
   }
 
-  ngAfterViewInit() {
-    this.botaoIniciar.nativeElement.click();
-  }
-  iniciarReproducao() {
-    const video = this.logoVideo.nativeElement;
-    video.currentTime = 0; 
-    video.play();
-  }
+  // ngAfterViewInit() {
+  //   setTimeout(() => {
+  //     this.addAnimationClass();
+  //   }, 2000);
+  // }
+
+  // private addAnimationClass() {
+  //   this.logoAnimate.nativeElement.classList.add('addRotateAnimation');
+  // }
 }
 
 

@@ -1,73 +1,169 @@
-:root{
-  --defaultFont: 'Poppins', sans-serif;
-}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-.splashContainer {
+.splashPage{
+  width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--whiteColor);
 }
-
-.logo-video {
+.splashContainer {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secundaryColor);
+  color:  var(--whiteColor);
+  animation: heightInitialAnimation .30s ease forwards, widthInitialAnimation .20s ease forwards 2s;
+}
+@keyframes heightInitialAnimation {
+  0% {
+      height: 3px;
+  }
+  100% {
+      height: 100%;
+      border-radius: 20px;
+  }
+}
+@keyframes widthInitialAnimation {
+  0% {
+      width: 3px;
+      border-radius: 0;
+  }
+  100% {
+      width: 100%;
+      border-radius: 0;
+  }
+}
+.logoAnimate {
   width: 80%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  video {
-    width: 103%;
-    background-color: #000;
+  opacity: 0;
+  animation: showLogoAnimation 1s ease 2s forwards;
+}
+@keyframes showLogoAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
   }
 }
-// .logo-video {
-//   background: linear-gradient(
-//     to right,
-//     #fff,
-//     #000,
-//     #000,
-//     #000,
-//     #fff,
-//     #fff,
-//     #fff
-//   );
-//   background-clip: text;
-//   -webkit-background-clip: text;
-//   color: transparent;
-//   background-size: 300% auto;
-//   animation: shine 15s linear infinite;
-//   font-family: var(--defaultFont), sans-serif;
-//   font-weight: bold;
-//   text-align: center;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: start;
-//   justify-content: center;
-// }
-// h1 {
-//   font-family: var(--defaultFont);
-// }
+.logoTitle {
+  width: 100%;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: start;
+  margin-bottom: 9px;
+  line-height: 50px;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  animation: textColorAnimation 2.2s linear;
+}
+.logoSubtitle {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: -13px;
+  width: 100%;
+  text-align: start;
+}
+.titleMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    var(--whiteColor),
+    var(--whiteColor),
+    var(--whiteColor),
+    var(--whiteColor),
+    var(--whiteColor),
+    var(--whiteColor)
+  );
+  background-size: 330% auto;
+  animation: backgroundAnimation 3s linear;
 
-// .web-developer {
-//   font-family: var(--defaultFont);
- 
-// }
-
-// @keyframes shine {
-//   100% {
-//     background-position: -100%;
-//   }
-//   0% {
-//     background-position: 200%;
-//   }
-// }
-
-
+}
+@keyframes backgroundAnimation {
+  100% {
+    background-position: -100%;
+  }
+  0% {
+    background-position: 200%;
+}
+}
+@keyframes textColorAnimation {
+  0% {
+    color: transparent;
+  }
+  50% {
+      color: transparent;
+    }
+  100% {
+    color: var(--whiteColor);
+}
+}
+.loadindText {
+  color:  var(--whiteColor);
+  margin: 10px auto 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-family: var(--defaultFont);
+}
+.loadindText span {
+  width: 5px;
+  height: 5px;
+  background-color: var(--whiteColor);
+  margin-left: 5px;
+  border-radius: 50%;
+  // margin-bottom: 3px;
+}
+.loadindText span:nth-child(1) {
+animation: moveUpDown 1s infinite 0s;
+}
+.loadindText span:nth-child(2) {
+animation: moveUpDown 1s infinite 0.2s;
+}
+.loadindText span:nth-child(3) {
+animation: moveUpDown 1s infinite 0.4s;
+}
+@keyframes moveUpDown {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
 
 
 
