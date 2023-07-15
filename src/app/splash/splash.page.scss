@@ -23,7 +23,7 @@
   align-items: center;
   background-color: var(--secundaryColor);
   color:  var(--whiteColor);
-  animation: heightInitialAnimation .30s ease forwards, widthInitialAnimation .20s ease forwards 2s;
+  animation: heightInitialAnimation .20s ease forwards, widthInitialAnimation .20s ease forwards 0.8s;
 }
 @keyframes heightInitialAnimation {
   0% {
@@ -52,7 +52,7 @@
   align-items: center;
   overflow: hidden;
   opacity: 0;
-  animation: showLogoAnimation 1s ease 2s forwards;
+  animation: showLogoAnimation 0.7s ease 1s forwards;
 }
 @keyframes showLogoAnimation {
   0% {
@@ -129,11 +129,12 @@
 }
 }
 .loadindText {
+  font-size: 13px;
   color:  var(--whiteColor);
   margin: 10px auto 15px auto;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   font-family: var(--defaultFont);
 }
 .loadindText span {
@@ -142,7 +143,7 @@
   background-color: var(--whiteColor);
   margin-left: 5px;
   border-radius: 50%;
-  // margin-bottom: 3px;
+  margin-bottom: 3px;
 }
 .loadindText span:nth-child(1) {
 animation: moveUpDown 1s infinite 0s;
@@ -164,7 +165,16 @@ animation: moveUpDown 1s infinite 0.4s;
       transform: translateY(0);
   }
 }
-
-
+.textZoom {
+  animation: zoomIn 0.3s ease-in-out;
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 
